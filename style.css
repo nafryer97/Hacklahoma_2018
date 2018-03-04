@@ -1,90 +1,169 @@
 .grid
 {
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-template-columns:2vw 1fr 1fr 2vw;
+	font-kerning: auto;
+	grid-template-rows: 1fr 1fr 1fr ;
+	grid-template-columns:2vw 1fr 1fr 2vw ;
 	grid-template-areas: 
 	". button1 button2 ."
 	". input output ."
 	". blurb blurb .";
-	font-family: monospace;
 
 }
 .button1
 {
 	grid-area: button1;
-	background-color: #b0b0b0;
-	opacity: 25;
+	background-color: #A9A9A9;
+	opacity: 0.8;
 	font-size: 1.5em;
+	font-weight: bold;
+	font-family: "times new roman";
+	font-variant: small-caps;
 	border: none;
-	padding: 2.5vh 2.5vw;
-	margin-top: 45vh;
-	margin-bottom: 45vh;
-	margin-left: 20vw;
-	margin-right: 15vw
-}
-.button2
-{
-	grid-area: button2;
-	background-color: #b0b0b0;
-	opacity: 25;
-	font-size: 1.5em;
-	border: none;
+	border-radius: 3%;
 	padding: 2.5vh 2.5vw;
 	margin-top: 45vh;
 	margin-bottom: 45vh;
 	margin-left: 15vw;
-	margin-right: 20vw
+	margin-right: 15vw;
+	-webkit-transition: background-color 1.0s ease;
+
+}
+.button2
+{
+	grid-area: button2;
+	background-color: #A9A9A9;
+	font-weight: bold;
+	font-family: "times new roman";
+	font-variant: small-caps;
+	opacity: 0.8;
+	font-size: 1.5em;
+	border: none;
+	border-radius: 3%;
+	padding: 2.5vh 2.5vw;
+	margin-top: 45vh;
+	margin-bottom: 45vh;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	-webkit-transition: background-color 1.0s ease;
 }
 .button1:hover
 {
-	background-color: white;
+	background-color: #FFFFFF;
+	cursor:pointer;
 }
 .button2:hover
 {
-	background-color: white;
+	background-color: #FFFFFF;
+	cursor:pointer;
 }
 
 .input
 {
 	grid-area: input;
-	background-image: linear-gradient(-25deg, #616161 0%, #b0b0b0 100%);
+	background-image: linear-gradient(155deg, #000000 0%, #606060 100%);
 	//background-color: black;
-	opacity: 25;
+	opacity: 0.87;
+	padding-top: 8vh;
+	padding-bottom: 8vh;
 	color: white;
+	display: block;
 	text-align: center;
+	align-items: center;
 	margin-right: 0.5vw;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
+	border: none;
+	border-radius: 1%;
 
+}
+.inpElement
+{
+	font-family: "times new roman";
+	font-size: 1.25em;
+	width: 11.5vw;
+}
+.calcButton
+{
+	background-color: #A9A9A9;
+	padding: 0.3vh 0.9vw;
+	font-family: "times new roman";
+	font-variant: small-caps;
+	border: none;
+	border-radius: 2%;
+	font-size: 1.25em;
+	font-kerning: auto;	
+	-webkit-transition: background-color 1.0s ease;
+}
+.calcButton:hover
+{
+	background-color: #FFFFFF;
+	cursor:pointer;
 }
 .output
 {
 	grid-area: output;
-	background-image: linear-gradient(-25deg, #616161 0%, #b0b0b0 100%);
+	background-image: linear-gradient(155deg, #000000 0%, #606060 100%);
 	//background-color: black;
-	opacity: 25;
+	opacity: 0.87;
 	color: white;
+	display: block;
 	text-align: center;
+	padding-bottom: 8vh;
+	padding-top: 8vh;
 	margin-left: 0.5vw;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
+	border: none;
+	border-radius: 1%;
 }
 .blurb
 {
 	grid-area: blurb;
 	background-color: black;
+	opacity: 0.93;
 	color: white;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 1vh;
+
+	display: grid;
+	grid-row-gap: 5vh; 
+	grid-template-rows: 2.5vh 1fr 1fr ;
+	grid-template-columns: 2vw 1fr 1fr 2vw;
+	grid-template-areas: 
+	". footer footer ."
+	". sponsors sponsors ."
+	". noah jacob .";
+}
+.footer
+{
+	grid-area: footer;
+	font-size: 1.5em;
+}
+.sponsors
+{
+	grid-area: sponsors;
+}
+.noah
+{
+	grid-area: noah;
+}
+.jacob
+{
+	grid-area: jacob;
 }
 body
 {
 	background-image: url("bank_vault.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	font-family: "times new roman";
+	font-variant: small-caps;
+	font-size: 1.25em;
+	font-kerning: auto;
 }
 
 p{
 padding: 10px;
 }
+

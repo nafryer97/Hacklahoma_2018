@@ -33,9 +33,7 @@
 		var hoursWorked = document.getElementById("hours").value;
 		var wage = document.getElementById("wage").value;
 		var stateVal = document.getElementById("state").value;
-		document.getElementById("output1").innerHTML = hoursWorked;
-		document.getElementById("output2").innerHTML = wage;
-		document.getElementById("stateSelected").innerHTML = stateVal;
+		
 		if(stateVal == "Oklahoma")
 		{
 			var fuck = .05;
@@ -68,6 +66,9 @@
 		var taxValue = grossWage * fuck;
 		var netWage = grossWage - taxValue;
         //var product = 4;
+        document.getElementById("output1").innerHTML = hoursWorked;
+		document.getElementById("output2").innerHTML = taxValue;
+		document.getElementById("stateSelected").innerHTML = stateVal;
 		document.getElementById("result").innerHTML = netWage;
 
 		
@@ -90,7 +91,7 @@
 		<div class="input" id="section2">
 
 			<p>What State do you live in?</p>
-				<select id = "state">
+				<select class="inpElement" id="state">
 					<option value = "Oklahoma">Oklahoma</option>
 					<option value = "Texas">Texas</option>
 					<option value = "New Mexico">New Mexico</option>
@@ -101,27 +102,39 @@
 				</select>
 				<br>
 
-
 				<p>How many hours are you working today?</p>
-				<input type="number" id="hours">
+				<input class="inpElement" type="number" step=0.5 min=0.0 max=24.0 id="hours">
 				<br>
 				<p>How much do you make an hour?</p>
-				<input type="number" id="wage">
+				<input class="inpElement" type="number" step=0.01 min=0.0 id="wage">
 				<br>
-				<p><button onClick="myFunction()">Don't click this</button></p>
+				<p><button class="calcButton" onClick="myFunction()">Time Is Money</button></p>
 		</div>
 
 		<div class="output">
 			<span id="outputBlock">
-				OUTPUT<br>
-				This how many hours you've worked<p id="output1"></p>
-				Total amount after taxes: <p id="output2"></p>
-				Total $$ earned: <p id="result"></p>
+				<br>
 				State Selected <p id="stateSelected"></p>
+				You Worked <p id="output1"> Hours.</p> 
+				<br>
+				Withheld in Taxes: <br> <p id="output2"></p>
+				Your Net Earnings: <p id="result"></p>
 			</span>
-
-			redo Calculation: <button onclick="refresh()">DO IT AGAIN</button></div>
-		<div class="blurb">Created by Noah Freyr™ and Jacob Robinett @ Hacklahoma 2018 </div>
+		</div>
+		<div class="blurb">
+			<div class="footer">
+			Created by Noah Fryer™ and Jacob Robinett @ Hacklahoma 2018 
+			</div>
+			<div class="sponsors">
+				<img src="hacklahoma_artisticlogo_transparent.svg" alt="" style="max-width:45vw;max-height:45vh;">
+			</div>
+				<div class="noah">
+					<img src="noah_tetons.jpg" alt="" style="max-height:40vh;max-width:32vw;">
+				</div>
+				<div class="jacob">
+					<img src="jacob_headshot.jpg" alt="" style="max-height:40vh;max-width:30vw;">
+				</div>
+		</div>
 	</div>
 </body>
 </html>
