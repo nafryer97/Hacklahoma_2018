@@ -1,9 +1,68 @@
+.grid
+{
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns:2vw 1fr 1fr 2vw;
+	grid-template-areas: 
+	". salary hourly ."
+	". input output ."
+	". blurb blurb .";
+	font-family: monospace;
+}
+.salary
+{
+	 grid-area: salary;
+	 background-color: black;
+	 color: white;
+	 text-align: center;
+	 opacity: 0.75;
+	 padding-top: 49vh;
+	 margin-right: 0.5vw;
+	 margin-top: -1.5vh;
+	 height: 100vh;
+}
+.hourly
+{
+	grid-area: hourly;
+	background-color: black;
+	text-align: center;
+	color: white;
+	opacity: 0.75;
+	padding-top: 49vh;
+	margin-left: 0.5vw;
+	margin-top: -1.5vh;
+	height: 100vh;
+}
+.input
+{
+	grid-area: input;
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin-right: 0.5vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+
+}
+.output
+{
+	grid-area: output;
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin-left: 0.5vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+.blurb
+{
+	grid-area: blurb;
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin-bottom: 5px;
+}
 body
 {
-	font-size: 2em;
-	color: navy;
-}
-h1
-{
-	color: red;
+	background-color: gray;
 }
