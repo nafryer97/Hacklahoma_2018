@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<script>
+	function myFunction() {
+		var hoursWorked = document.getElementById("hours").value;
+		var wage = document.getElementById("wage").value;
+		var stateVal = document.getElementById("state").value;
+		document.getElementById("output1").innerHTML = hoursWorked;
+		document.getElementById("output2").innerHTML = wage;
+		document.getElementById("stateSelected").innerHTML = stateVal;
+		if(stateVal == "Oklahoma")
+		{
+			var fuck = .05;
+		}
+		if(stateVal == "Texas")
+		{
+			var fuck = 1;
+		}
+		if(stateVal == "New Mexico")
+		{
+			var fuck = .049;
+		}
+		if(stateVal == "Kansas")
+		{
+			var fuck = .052;
+		}
+		if(stateVal == "Arkansas")
+		{
+			var fuck = .069;
+		}
+		if(stateVal == "Colorado")
+		{
+			var fuck = .0463;
+		}
+		if(stateVal == "Arizona")
+		{
+			var fuck = .0454;
+		}
+		var grossWage = hoursWorked * wage;
+		var taxValue = grossWage * fuck;
+		var netWage = grossWage - taxValue;
+        //var product = 4;
+		document.getElementById("result").innerHTML = netWage;
+
+		
+	}
+	function refresh(){
+		location.reload();
+	}
+</script>
+<style>
+	body, html, .main {
+	background-color:white;
+    height: 100%;
+}
+
+section {
+    min-height: 100%;
+}
+</style>
+<head>
+<body>
+	
+	<div class = "main">
+		<section style="background-color:white"">
+			<span>WELCOME!</span></br>
+			<span>[INSERT SPECIAL SAUSE NAME]</span><br>
+			<span>insert Description</span><br>
+			<button onclick="alert('fuck you.')">Button 1</button>
+			<a href="#section2"><button>Button 2</button></a>
+`			</br>
+			<span>Created by Noah Freyr™ and Jacob Robinett @ Hacklahoma 2018 </span>
+		</section>
+	</div>
+
+	<div class = "main" id="section2">
+		<section style="background-color:rgb(255, 153, 153)">
+			What State do you live in?
+	<select id = "state">
+		<option value = "Oklahoma">Oklahoma</option>
+		<option value = "Texas">Texas</option>
+		<option value = "New Mexico">New Mexico</option>
+		<option value = "kansas">Kansas</option>
+		<option value = "Arkansas">Arkansas</option>
+		<option value = "Colorado">Colorado</option>
+		<option value = "Arizona">Arizona</option>
+	</select>
+	<br>
+
+		How many hours are you working?
+		<input type="number" id="hours">
+		<br>
+		How much do you make an hour?
+		<input type="number" id="wage">
+		<br>
+		<button onClick="myFunction()">Don't click this</button>
+	<br>	
+	<span id="outputBlock">
+		OUTPUT<br>
+		Hours worked<p id="output1"></p>
+		Wage <p id="output2"></p>
+		Total $$ earned: <p id="result"></p>
+		State Selected <p id="stateSelected"></p>
+	</span>
+
+	redo Calculation: <button onclick="refresh()">DO IT AGAIN</button>
+		</section>
+	</div>
+</body>
+</head>
+</html>
