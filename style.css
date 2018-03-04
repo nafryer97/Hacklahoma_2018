@@ -2,14 +2,22 @@
 {
 	display: grid;
 	font-kerning: auto;
+<<<<<<< HEAD
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-template-columns:2vw 1fr 1fr 2vw;
 	grid-template-areas: 
 	". hypLink1 hypLink2 ."
+=======
+	grid-template-rows: 1fr 1fr 1fr ;
+	grid-template-columns:2vw 1fr 1fr 2vw ;
+	grid-template-areas: 
+	". button1 button2 ."
+>>>>>>> ef208eacd26393bfc9063ec9bf2a3e242305f8e3
 	". input output ."
 	". blurb blurb .";
 
 }
+<<<<<<< HEAD
 .hypLink1
 {
 	grid-area: hypLink1;
@@ -36,6 +44,10 @@
 .button1
 {
 	animation: fadeIn 3s;
+=======
+.button1
+{
+>>>>>>> ef208eacd26393bfc9063ec9bf2a3e242305f8e3
 	grid-area: button1;
 	background-color: #A9A9A9;
 	opacity: 0.8;
@@ -46,14 +58,24 @@
 	border: none;
 	border-radius: 3%;
 	padding: 2.5vh 2.5vw;
+<<<<<<< HEAD
 	margin-left: 4vw;
 	margin-right: 2vw;
+=======
+	margin-top: 45vh;
+	margin-bottom: 45vh;
+	margin-left: 15vw;
+	margin-right: 15vw;
+>>>>>>> ef208eacd26393bfc9063ec9bf2a3e242305f8e3
 	-webkit-transition: background-color 1.0s ease;
 
 }
 .button2
 {
+<<<<<<< HEAD
 	animation: fadeIn 3s;
+=======
+>>>>>>> ef208eacd26393bfc9063ec9bf2a3e242305f8e3
 	grid-area: button2;
 	background-color: #A9A9A9;
 	font-weight: bold;
@@ -64,6 +86,7 @@
 	border: none;
 	border-radius: 3%;
 	padding: 2.5vh 2.5vw;
+<<<<<<< HEAD
 	margin-right: 4vw;
 	margin-left: 2vw;
 	-webkit-transition: background-color 1.0s ease;
@@ -81,6 +104,14 @@
 	}
 }
 
+=======
+	margin-top: 45vh;
+	margin-bottom: 45vh;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	-webkit-transition: background-color 1.0s ease;
+}
+>>>>>>> ef208eacd26393bfc9063ec9bf2a3e242305f8e3
 .button1:hover
 {
 	background-color: #FFFFFF;
@@ -199,4 +230,9 @@ body
 
 p{
 padding: 10px;
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> ef208eacd26393bfc9063ec9bf2a3e242305f8e3
