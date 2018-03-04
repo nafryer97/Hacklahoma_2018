@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script>
+	$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<script>
+	function myFunction() {
+		var hoursWorked = document.getElementById("hours").value;
+		var wage = document.getElementById("wage").value;
+		var stateVal = document.getElementById("state").value;
+		if(stateVal == "Oklahoma")
+		{
+			var fuck = .05;
+		}
+		if(stateVal == "Texas")
+		{
+			var fuck = 0;
+		}
+		if(stateVal == "New Mexico")
+		{
+			var fuck = .049;
+		}
+		if(stateVal == "Kansas")
+		{
+			var fuck = .052;
+		}
+		if(stateVal == "Arkansas")
+		{
+			var fuck = .069;
+		}
+		if(stateVal == "Colorado")
+		{
+			var fuck = .0463;
+		}
+		if(stateVal == "Arizona")
+		{
+			var fuck = .0454;
+		}
+		var grossWage = hoursWorked * wage;
+		var taxValue = grossWage * fuck;
+		var netWage = grossWage - taxValue;
+        //var product = 4;
+        document.getElementById("output1").innerHTML = hoursWorked + " hours";
+		document.getElementById("output2").innerHTML = "$" + taxValue;
+		document.getElementById("stateSelected").innerHTML = stateVal;
+		document.getElementById("result").innerHTML = "$" + netWage;
+
+		
+	}
+	function refresh(){
+		location.reload();
+	}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".calcButton").click(function(){
+        $(".output").fadeIn();
+    });
+});
+</script>
+<head>
+<link rel="stylesheet"
+	type="text/css"
+	href="style.css"
+	>
+</head>
+
+<body>
+	<div class="grid">
+			<a href="#section2" class="hypLink1" style="max-width:0vw;max-height:0vh;">
+				<button class="button1">Hourly</button>
+			</a>
+			<a href="#section2" class="hypLink2" style="max-width:0vw;max-height:0vh;">
+				<button class="button2">Salary</button>
+			</a>
+		<div class="input" id="section2">
+
+			<p>What State do you live in?</p>
+				<select class="inpElement" id="state">
+					<option value = "Oklahoma">Oklahoma</option>
+					<option value = "Texas">Texas</option>
+					<option value = "New Mexico">New Mexico</option>
+					<option value = "kansas">Kansas</option>
+					<option value = "Arkansas">Arkansas</option>
+					<option value = "Colorado">Colorado</option>
+					<option value = "Arizona">Arizona</option>
+				</select>
+				<br>
+
+				<p>How many hours are you working today?</p>
+				<input class="inpElement" type="number" step=0.5 min=0.0 max=24.0 id="hours">
+				<br>
+				<p>How much do you make an hour?</p>
+				<input class="inpElement" type="number" step=0.01 min=0.0 id="wage">
+				<br>
+				<p><button class="calcButton" onClick="myFunction()">Time Is Money</button></p>
+		</div>
+
+		<div class="output" style="display: none;">
+			<span id="outputBlock">
+				<br>
+				State Selected <p id="stateSelected"></p>
+				You Worked <p id="output1"> Hours.</p> 
+				<br>
+				Withheld in Taxes: <br> <p id="output2"></p>
+				Your Net Earnings: <p id="result"></p>
+			</span>
+		</div>
+		<div class="blurb">
+			<div class="footer">
+			Created by Noah Fryer™ and Jacob Robinett @ Hacklahoma 2018 
+			</div>
+			<div class="sponsors">
+				<img src="hacklahoma_artisticlogo_transparent.svg" alt="" style="max-width:45vw;max-height:45vh;">
+			</div>
+				<div class="noah">
+					<img src="noah_tetons.jpg" alt="" style="max-height:40vh;max-width:32vw;">
+				</div>
+				<div class="jacob">
+					<img src="jacob_headshot.jpg" alt="" style="max-height:40vh;max-width:30vw;">
+				</div>
+		</div>
+	</div>
+</body>
+</html>
